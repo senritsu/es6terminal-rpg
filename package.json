@@ -1,0 +1,23 @@
+{
+  "name": "es6terminal-rpg",
+  "version": "0.1.0",
+  "description": "Simple rpg using es6terminal as input",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senritsu/es6terminal-rpg.git"
+  },
+  "author": "senritsu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/senritsu/es6terminal-rpg/issues"
+  },
+  "homepage": "https://github.com/senritsu/es6terminal-rpg#readme",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
