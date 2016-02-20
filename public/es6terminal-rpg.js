@@ -1,4 +1,4 @@
-
+'use strict';
 
 const terminal = new Terminal('.terminal-host')
 
@@ -16,8 +16,22 @@ loot --- take everything that you can
 stats --- show your stats and equipment
 `
 
+const map = new Map()
+
 const handler = (input) => {
     if(input == 'help') { return terminal.writeLine(helpString) }
+    if(input == 'look') { return map.current.description }
+    if(input.startsWith('go ')) {
+        const exit = input.substring(3)
+        const location = map.current.exits[exit]
+        if (location) {
+            map.move(location)
+            return `You went to ${map.current.name}.`
+        }
+        else {
+            return 'You cannot go there.'
+        }
+    }
     else { return 'Command not recognized.' }
 }
 
